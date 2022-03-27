@@ -1,5 +1,5 @@
 import React from "react";
-import { Navigate as navigate} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 // import ReviewList from '../components/ReviewList';
 // import FriendList from '../components/FriendList';
@@ -16,7 +16,7 @@ import DashboardImage from "../assets/profile/profile.png"
 
 const Profile = (props) => {
   var loggedIn = Auth.loggedIn()
-  // const navigate = useNavigate()
+  const navigate = useNavigate()
   console.log("LOGIN STATUS " + loggedIn);
   if (!loggedIn) { navigate("/login") }
   
